@@ -1,0 +1,50 @@
+Primary Key = sebuah data yg dapat merepresentasikan satu baris resort secara unik (ID) yang tidak boleh sama datanya menggunakan Auto Increment (AI)
+
+Istilah Database
+    field/Column
+    row
+    Key
+        Primary Key
+        Foreign Key
+    Auto Increment
+    Relationship
+    Normalization
+
+
+cara masuk database di CMD
+
+c:xampp\mysql\bin\mysql -u root -p 
+password : enter aja
+
+- melihat database
+MariaDB [(none)]>show databases;
+
+create database
+MariaDB [(none)]>create database namadatabase;
+
+pakai nama database
+MariaDB [(namadatabase)]>use namadatabase;
+
+buat struktur table database
+MariaDB [(namadatabase)]>create table namatabel (
+    -> ID int primary key auto_increment,
+    -> nama varchar(100),
+    -> email varchar(100) dan seterusnya
+    ->); selesai
+
+
+Insert Database
+MariaDB [(namadatabase)]>insert into namatabel values ('','nama','dll'); enter
+
+melihat database ditable
+MariaDB [(namadatabase)]>select * from namatabel;
+
+Mencari database 1 rekaman
+MariaDB [(namadatabase)]>select * from namatabel where namafield = '';
+
+Update data
+update namatabel sert namafield ='isi yang akan diupdate/diganti' where namafield ='isi yang akan diupdate';
+
+Delete data
+MariaDB [(namadatabase)]>
+delete from namatabel where namafield = '';
